@@ -1,0 +1,25 @@
+Using OBD2lib with pyserial for python to handle ELM comms
+Writing XGauge to ELM/OBD2lib converter
+using com0com with OBD2lib emulator for testing.
+
+ELM commands of interest
+
+BRD serial baud rate
+
+S0 turn off spaces in output
+RV read 12v voltage
+
+SH xyz set header for 11 bit ID (for messages being sent)
+SP h set protocol (6 for 11 bit CAN 500kbaud, 8 for 11 bit CAN 250 kbaud, 0 for automatic)
+SP Ah set default then try others if it fails
+TP h and TP Ah are try protocol and don't save the number to EEPROM
+
+WS warm start (doesn't reset custom serial baud rate)
+
+H1 show headers
+
+Escape xgauges
+http://www.cleanmpg.com/forums/archive/index.php/t-23777.html
+http://www.eaa-phev.org/wiki/Escape_PHEV_TechInfo#17
+http://www.scangauge.com/support/x-gauge/xgauges-for-cansf-vehicles/
+http://www.scangauge.com/support/x-gauge/ford-specific-xgauges/

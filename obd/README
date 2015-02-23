@@ -1,0 +1,5 @@
+This is work in progress code to read parameters from a vehicle and send them to a backend server to monitor the fleet.
+This uses code from obd2lib for python in order to communicate with an ELM327 compatible OBD2 reader.
+What I've written so far takes XGauge strings and parses them out into the pieces needed for the ELM dongle.  It then sets up the interface and sends out the request using obd2lib.
+
+There is an issue with the returned data and how it is being parsed.  Currently working through this issue.  It might be related to the dongle(s) I'm using.
